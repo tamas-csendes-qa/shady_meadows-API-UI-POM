@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { RoomsFactory } from '../factories/rooms.factory';
-import { BookingPage } from '../pages/BookingPage';
+import { RoomsFactory } from '../../factories/rooms.factory';
+import { BookingPage } from '../../pages/BookingPage';
 
 test('booking v1', async ({ page }) => {
   const bookingPage = new BookingPage(page);
