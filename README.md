@@ -1,4 +1,4 @@
-# Shady Meadows – API & UI Tesztautomatizálás
+# Shady Meadows – API & UI Tesztautomata projekt
 
 Playwright + TypeScript alapú tesztautomatizálási projekt az [automationintesting.online](https://automationintesting.online) weboldalhoz. A projekt UI és API teszteket egyaránt tartalmaz, Page Object Model (POM) architektúrával felépítve.
 
