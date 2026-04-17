@@ -1,20 +1,32 @@
+type RoomEquipment = 'tv' | 'wifi' | 'radio' | 'safe';
+
 export type Rooms = {
   name: string;
-  tv: boolean;
-  wifi: boolean;
-  safe: boolean;
+  equipment: Record<RoomEquipment, boolean>;
 };
 
 export const RoomsFactory = {
   singleRoom(overrides?: Partial<Rooms>): Rooms {
-    return { name: 'Single', tv: true, wifi: true, safe: true, ...overrides };
+    return {
+      name: 'Single',
+      equipment: { tv: true, wifi: true, safe: true, radio: false },
+      ...overrides,
+    };
   },
 
   doubleRoom(overrides?: Partial<Rooms>): Rooms {
-    return { name: 'Double', tv: true, wifi: true, safe: true, ...overrides };
+    return {
+      name: 'Double',
+      equipment: { tv: true, wifi: false, safe: true, radio: true },
+      ...overrides,
+    };
   },
 
   suiteRoom(overrides?: Partial<Rooms>): Rooms {
-    return { name: 'Suite', tv: true, wifi: true, safe: true, ...overrides };
+    return {
+      name: 'Suite',
+      equipment: { tv: false, wifi: true, safe: true, radio: true },
+      ...overrides,
+    };
   },
 };
