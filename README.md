@@ -1,5 +1,7 @@
 # Shady Meadows – API & UI Tesztautomata projekt
 
+[![Playwright Tests](https://github.com/tamas-csendes-qa/shady_meadows-API-UI-POM/actions/workflows/playwright.yml/badge.svg)](https://github.com/tamas-csendes-qa/shady_meadows-API-UI-POM/actions/workflows/playwright.yml)
+
 Playwright + TypeScript alapú tesztautomatizálási projekt az [automationintesting.online](https://automationintesting.online) weboldalhoz. A projekt UI és API teszteket egyaránt tartalmaz, Page Object Model (POM) architektúrával felépítve.
 
 ## Technológiák
