@@ -21,6 +21,10 @@ export class BookingPage extends BasePage {
     await this.checkOutInput.fill(date);
   }
 
+  async checkAvailability() {
+    await this.checkAvailabilityButton.click();
+  }
+
   async bookRoom(room: Rooms) {
     await this.page
       .locator('.room-card')
