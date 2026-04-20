@@ -1,14 +1,11 @@
-import { test, expect, request } from '@playwright/test';
+import { request } from '@playwright/test';
+import { test, expect } from '../../fixtures/api.fixture'
 import { AuthApi } from '../../api/auth.api';
 import { BookingApi } from '../../api/booking.api';
 import { BookingFactory } from '../../factories/booking.factory';
 
-test('POST /booking - create & delete booking', async () => {
+test('POST /booking - create & delete booking', async ({ apiContext }) => {
   try {
-    const apiContext = await request.newContext({
-      baseURL: 'https://restful-booker.herokuapp.com',
-    });
-
     const booking = BookingFactory.validBooking();
     const bookingApi = new BookingApi(apiContext);
     const bookingId = await bookingApi.createBooking(booking);
