@@ -28,7 +28,7 @@ export class BookingApi {
     return response;
   }
 
-  async partialUpdateBooking(id: number, data: Partial<Booking>, token: string): Promise<any> {
+  async partialUpdateBooking(id: number, data: Partial<Booking>, token: string): Promise<APIResponse> {
     const response = await this.request.patch(`/booking/${id}`, {
       data: data,
       headers: {
