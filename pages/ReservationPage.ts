@@ -22,11 +22,8 @@ export class ReservationPage extends BasePage {
     await expect(this.totalPrice).toHaveText(`£${expectedTotal}`);
   }
 
-  async waitForPage() {
-    await this.roomFeatures.waitFor();
-  }
-
   async checkRoomFeatures(featureName: string): Promise<boolean> {
+    await this.roomFeatures.waitFor();
     return await this.roomFeatures.locator(`span:has-text("${featureName}")`).isVisible();
   }
 
