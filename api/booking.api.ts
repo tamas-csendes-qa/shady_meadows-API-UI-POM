@@ -1,7 +1,8 @@
 import { APIRequestContext, APIResponse } from '@playwright/test';
 import { Booking } from '../factories/booking.factory';
+import { IBookingApi } from '../types/IBookingApi';
 
-export class BookingApi {
+export class BookingApi implements IBookingApi {
   constructor(private request: APIRequestContext) {}
 
   async createBooking(booking: Booking): Promise<number> {
