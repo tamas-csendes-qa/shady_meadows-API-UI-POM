@@ -1,6 +1,6 @@
 import { Page, expect } from '@playwright/test';
 import { BasePage } from './BasePage';
-import { Rooms, RoomsFactory } from '../factories/rooms.factory';
+import { Rooms } from '../factories/rooms.factory';
 
 export class ReservationPage extends BasePage {
     private readonly roomFeatures = this.page.locator('.row.g-3.d-flex.flex-wrap');
@@ -22,8 +22,11 @@ export class ReservationPage extends BasePage {
     await expect(this.totalPrice).toHaveText(`£${expectedTotal}`);
   }
 
-  async checkRoomFeatures(featureName: string): Promise<boolean> {
+  async waitForPage() {
     await this.roomFeatures.waitFor();
+  }
+
+  async checkRoomFeatures(featureName: string): Promise<boolean> {
     return await this.roomFeatures.locator(`span:has-text("${featureName}")`).isVisible();
   }
 
