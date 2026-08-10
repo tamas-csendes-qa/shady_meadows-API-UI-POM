@@ -22,7 +22,7 @@ Playwright + TypeScript alapú tesztautomatizálási projekt az [automationintes
 
 ```bash
 # Repó klónozása
-git clone https://github.com/thomee84/shady_meadows-API-UI-POM.git
+git clone https://github.com/tamas-csendes-qa/shady_meadows-API-UI-POM.git
 cd shady_meadows-API-UI-POM
 
 # Függőségek telepítése
