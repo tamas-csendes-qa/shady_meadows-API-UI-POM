@@ -13,7 +13,7 @@ test('booking v1', async ({ page }) => {
   await bookingPage.checkOut('12/05/2026');
   await bookingPage.checkAvailability();
   await bookingPage.bookRoom(room);
-  
+
   expect(await reservationPage.checkRoomFeatures('WiFi')).toBe(room.equipment.wifi);
   expect(await reservationPage.checkRoomFeatures('Radio')).toBe(room.equipment.radio);
   expect(await reservationPage.checkRoomFeatures('Safe')).toBe(room.equipment.safe);

@@ -2,7 +2,7 @@ type RoomEquipment = 'tv' | 'wifi' | 'radio' | 'safe';
 
 export type Rooms = {
   name: string;
-  price: number,
+  price: number;
   equipment: Record<RoomEquipment, boolean>;
 };
 

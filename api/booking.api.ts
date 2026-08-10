@@ -29,7 +29,11 @@ export class BookingApi implements IBookingApi {
     return response;
   }
 
-  async partialUpdateBooking(id: number, data: Partial<Booking>, token: string): Promise<APIResponse> {
+  async partialUpdateBooking(
+    id: number,
+    data: Partial<Booking>,
+    token: string
+  ): Promise<APIResponse> {
     const response = await this.request.patch(`/booking/${id}`, {
       data: data,
       headers: {
