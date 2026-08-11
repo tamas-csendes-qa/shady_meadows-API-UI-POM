@@ -7,7 +7,6 @@ yarn-error.log*
 # Playwright
 test-results/
 playwright-report/
-blob-report/
 trace.zip
 /playwright/.cache/
 /playwright/.auth/

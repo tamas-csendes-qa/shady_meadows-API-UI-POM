@@ -1,7 +1,7 @@
 {
   "name": "shady_meadows-api-ui-pom",
   "version": "1.0.0",
-  "description": "",
+  "description": "Playwright + TypeScript UI and API test automation suite with Page Object Model, factories and fixtures",
   "main": "index.js",
   "scripts": {
     "format": "prettier --write .",
@@ -10,8 +10,13 @@
     "test:headed": "npx playwright test --headed",
     "report": "npx playwright show-report"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "playwright",
+    "typescript",
+    "page-object-model",
+    "api-testing"
+  ],
+  "author": "Csendes Tamás",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
